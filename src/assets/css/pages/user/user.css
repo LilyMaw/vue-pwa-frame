@@ -1,0 +1,33 @@
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.form-group .label {
+  display: inline-block;
+  width: 30%;
+}
+.v-application p {
+  margin-bottom: 0;
+}
+input {
+  width: 70%;
+  border: 1px solid #efefef;
+  padding: 10px;
+  outline: none;
+}
+input[type=file] {
+  border: none;
+}
+::placeholder {
+  vertical-align: center;
+}
+.profile,
+img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+.create-btn {
+  margin: auto;
+}

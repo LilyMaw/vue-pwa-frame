@@ -1,0 +1,25 @@
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.form-group .label {
+  display: inline-block;
+  width: 30%;
+}
+input[type="text"],
+textarea {
+  width: 70%;
+  border: 1px solid #efefef;
+  padding: 10px;
+  outline: none;
+}
+textarea {
+  overflow: hidden;
+}
+::placeholder {
+  vertical-align: center;
+}
+.create-btn {
+  margin: auto;
+}

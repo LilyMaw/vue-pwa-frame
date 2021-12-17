@@ -13,9 +13,15 @@
             <div class="route-links">
               <v-menu offset-y v-if="isLoggedIn">
                 <template v-slot:activator="{ on }">
+                     <v-btn :to="{ name: 'post-list' }" class="post-list-btn" color="primary">
+                    Post List 
+                  </v-btn>
                   <v-btn class="ma-2" text v-on="on">
                     {{ userName }}
                     <v-icon>arrow_drop_down</v-icon>
+                  </v-btn>
+                  <v-btn :to="{ name: 'user-list' }" class="post-list-btn ml-4" color="primary">
+                    User List 
                   </v-btn>
                 </template>
                 <v-list>

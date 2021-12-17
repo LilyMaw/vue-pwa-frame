@@ -1,6 +1,5 @@
 import { mapGetters } from "vuex";
 import constants from "../../constants";
-
 export default {
   data() {
     return {
@@ -8,7 +7,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["isLoggedIn", "userType", "userName"]),
+    ...mapGetters(["isLoggedIn", "userName", "userId"]),
   },
   methods: {
     /**
@@ -30,7 +29,7 @@ export default {
      * @returns void
      */
     showProfile() {
-      // TODO: do something
+      this.$router.push(`/user/detail/${this.userId}`)
     },
   },
 };

@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "role_id": 1,
         "name": "Aung Pyae Sone",
         "email": "aungpyaesone@gmail.com",
         "password": "APSpassword",
@@ -14,6 +15,7 @@
     },
     {
         "id": 2,
+        "role_id": 2,
         "name": "Ye Myat Thu",
         "email": "yemyatthu@gmail.com",
         "password": "YMTpassword",
@@ -27,6 +29,7 @@
     },
     {
         "id": 3,
+        "role_id": 2,
         "name": "May Thu Khaing",
         "email": "maythukhaing@gmail.com",
         "password": "MTKpassword",

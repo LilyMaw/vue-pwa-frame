@@ -31,6 +31,7 @@ export default {
       ],
       postList: [],
       showList: [],
+      search: "",
     };
   },
   computed: {
@@ -48,7 +49,11 @@ export default {
       .get("/post/list")
       .then((response) => {
         this.postList = response.data.post_list;
-        this.showList = this.postList;
+        this.showList = this.postList.filter((post) => {
+          return (
+            !post.deleted_user_id
+          );
+        });
       })
       .catch((err) => {
         console.log(err);
@@ -67,6 +72,20 @@ export default {
           post.created_user.includes(this.keyword)
         );
       });
+    },
+    deletePost(postId) {
+      if(confirm('are you sure?'))
+      this.$axios.delete(`/delete/post/${postId}`).then(() => {
+        location.reload();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    },
+    searchTitle(search) {
+      this.showList =  this.postList.filter(post => {
+        return (post.title).toLowerCase().includes(search.toLowerCase())
+      })
     },
   },
 };

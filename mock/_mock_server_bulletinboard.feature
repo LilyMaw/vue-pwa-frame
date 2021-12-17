@@ -74,6 +74,7 @@ Feature: mock server for bulletinboard
                             id: user.id,
                             name: user.name,
                             email: user.email,
+                            role_id: user.role_id,
                             token: user.token,
                             token_type: "Bearer"
                         }
@@ -113,6 +114,7 @@ Feature: mock server for bulletinboard
                             tmpUser.id = userList[index].id;
                             if(userList[index].name) tmpUser.name = userList[index].name;
                             if(userList[index].email) tmpUser.email = userList[index].email;
+                             if(userList[index].role_id) tmpUser.role_id = userList[index].role_id;
                             if(userList[index].profile_path) tmpUser.profile_path = userList[index].profile_path;
                             if(userList[index].phone) tmpUser.phone = userList[index].phone;
                             if(userList[index].address) tmpUser.address = userList[index].address;
